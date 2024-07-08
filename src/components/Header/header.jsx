@@ -8,7 +8,7 @@ export const Header = () =>{
 
     const {user} = useSelector(state => state.user)
     return(
-      <Navbar expand="lg" className="btn_colour py-3 sticky-top">
+      <Navbar expand="lg" className="btn_colour py-1 sticky-top">
       <div className="container">
                 <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/">
                     <img src={logo} alt="" className='logo-image' />
@@ -20,16 +20,16 @@ export const Header = () =>{
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto my-2 text-center">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home </NavLink>
+                            <NavLink className="nav-link fw-bold" to="/">HOME</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/product">Products</NavLink>
+                            <NavLink className="nav-link fw-bold" to="/product">PRODUCTS</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/about">Categories</NavLink>
+                            <NavLink className="nav-link fw-bold" to="/shop">SHOP</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                            <NavLink className="nav-link fw-bold" to="/contact">CONTACT</NavLink>
                         </li>
                     </ul>
                     <div className='buttons text-center'>

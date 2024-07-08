@@ -1,0 +1,71 @@
+.product-details {
+    font-family: Arial, sans-serif;
+  }
+  
+  .details-column {
+    padding: 20px;
+  }
+  
+  .details-column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  .badge-viewed {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .approx-price {
+    color: gray;
+  }
+  
+  .Productbuttons{
+    width: 100%;
+    
+   
+  }
+  
+  .buy-now-button {
+    background-color: #e34927cb  !important;
+    border: 1px solid #e34927cb!important;
+    margin-right: 10px;
+    width: 100%;
+    border-radius: 50%;
+    margin: 2px;
+    border-radius: 10px !important;
+  }
+  
+  .add-to-cart-button {
+    background-color: #e34927cb !important;
+    border: 1px solid #e34927cb!important;
+    width: 100%;
+    margin: 2px;
+    border-radius: 10px !important;
+  }
+  
+  .add-to-watchlist-button {
+    background-color: aliceblue !important;
+    text-decoration: underline;
+    border: none !important;
+    width: 100%;
+    color: black !important;
+    border: 1px solid #e34927cb!important;
+    margin: 2px;
+    border-radius: 10px !important;
+  }
+  
+  .add-to-watchlist-button:hover {
+    text-decoration: none;
+  }
+  

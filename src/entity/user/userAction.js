@@ -12,7 +12,7 @@ export const getUserAction = () => async(dispatch)=>{
         return toast.error(user.message)
     }
 
-    console.log(user);
+   
 
     dispatch(setUser(user.data))
 }
@@ -23,8 +23,6 @@ export const userAutoLoginAction = () => async(dispatch)=>{
 
     const accessJWT = sessionStorage.getItem("accessJWT")
     const refreshJWT = localStorage.getItem("refreshJWT")
-
-    console.log(accessJWT, refreshJWT);
 
     if(accessJWT){
         return dispatch(getUserAction())
