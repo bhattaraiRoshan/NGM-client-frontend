@@ -1,0 +1,98 @@
+.custom-card {
+  max-width: 300px;
+  margin: auto;
+}
+
+/* .sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: green;
+  padding: 10px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  font-size: ;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  color: red;
+} */
+.star-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+.star {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(5);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(8);
+
+  }
+}
+.custom-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.custom-card-description {
+  font-size: 1rem;
+  color: gray;
+}
+
+.custom-card-prices {
+  display: flex;
+  /* justify-content: space-between; */
+  
+  gap: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: red;
+}
+
+.sale-price {
+  color: green;
+  font-weight: bold;
+}
+
+.custom-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.custom-card-button {
+  width: 48%;
+}

@@ -1,0 +1,29 @@
+
+
+.landing-container {
+    display: flex;
+    justify-content: center; /* Center the carousel horizontally */
+    padding: 20px; /* Optional: add some padding */
+}
+
+.custom-carousel {
+    width: 80%; /* Set the width of the carousel to 80% */
+}
+
+.custom-carousel .carousel-item img {
+    height: 400px; /* Maintain the height for images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+
+@media (max-width: 768px) {
+    .custom-carousel {
+        width: 90%; /* Increase width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-carousel {
+        width: 100%; /* Take full width for very small screens */
+    }
+}

@@ -12,6 +12,8 @@ export const getUserAction = () => async(dispatch)=>{
         return toast.error(user.message)
     }
 
+   
+
     dispatch(setUser(user.data))
 }
 
