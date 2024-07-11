@@ -1,0 +1,61 @@
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  align-items: center; /* Center align items vertically */
+}
+
+.item-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-ship-date {
+  color: orange;
+}
+
+.item-additional-info {
+  font-size: 14px;
+  color: #555;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  margin: 0 5px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+.coupon-code {
+  display: flex;
+  align-items: center;
+}
+
+.coupon-code label {
+  margin-right: 10px;
+}
+
+.grand-total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .cart-item .col-md-2,
+  .cart-item .col-md-4 {
+    text-align: center;
+  }
+
+  .cart-summary .col-md-8 {
+    text-align: center;
+  }
+}

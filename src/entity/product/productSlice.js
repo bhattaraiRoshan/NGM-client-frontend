@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 
     allProduct: [],
-    oneProduct: []
+    oneProduct: {}
 }
 
 const productSlice = createSlice({

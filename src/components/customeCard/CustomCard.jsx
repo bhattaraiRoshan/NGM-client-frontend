@@ -5,10 +5,16 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import './customCard.css';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCount } from '../../entity/cart/CartSlice';
+import { toast } from 'react-toastify';
+import { getOneProductForCartAction } from '../../entity/cart/CartAction';
 
 export const CustomCard = ({ img, name, price, salesPrice, description, id }) => {
   
+  const {count} = useSelector(state => state.cart)
   
+
   const shortDesc = (description, wordLimit) =>{
 
     const words = description.split(" ")
@@ -19,6 +25,16 @@ export const CustomCard = ({ img, name, price, salesPrice, description, id }) =>
 
     return description
   } 
+
+  const dispatch = useDispatch()
+
+  const handelOnClickCart = (id) =>{
+
+      dispatch(setCount(count + 1))
+      toast.success("Product Added to the Cart :)")
+      dispatch(getOneProductForCartAction(id))
+
+  }
   
   return (
     <Card className="custom-card">
@@ -52,7 +68,7 @@ export const CustomCard = ({ img, name, price, salesPrice, description, id }) =>
           <Link to={`/product/${id}`}>
             <Button variant="primary" className="custom-card-button">Buy Now</Button>
           </Link>
-          <Button variant="secondary" className="custom-card-button">Add to Cart</Button>
+          <Button variant="secondary" className="custom-card-button" onClick={() => handelOnClickCart(id)}>Add to Cart</Button>
         </div>
       </Card.Body>
     </Card>
