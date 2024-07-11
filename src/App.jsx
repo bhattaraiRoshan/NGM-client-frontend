@@ -14,6 +14,7 @@ import { useEffect } from "react"
 import {  getAllProductAction } from "./entity/product/productAction"
 import { useDispatch } from "react-redux"
 import { ProductDetailsPage } from "./pages/product/ProductDetailsPage"
+import { CartPage } from "./pages/cart/CartPage"
 
 
 function App() {
@@ -35,9 +36,10 @@ function App() {
         <Route path="/contactus" element={<Layout><ContactUsPage/></Layout>}/>
         <Route path="/contact" element={<Layout><Contact/></Layout>}/>
         <Route path="/product" element={<Layout><ProductPage/></Layout>}/>
+        <Route path="/cart" element={<Layout><CartPage/></Layout>}/>
         <Route path="/product/:_id" element={<Layout><ProductDetailsPage/></Layout>} />
       </Routes>
-      <ToastContainer/>
+      <ToastContainer theme="colored" autoClose={100} />
     </>
   )
 }

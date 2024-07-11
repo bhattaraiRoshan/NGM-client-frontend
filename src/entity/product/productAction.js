@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
 import { getAllProducts, getOneProductFromID } from "./productAxiosHelper"
 import { setAllProduct, setOneProduct } from "./productSlice";
+import { setCart } from "../cart/CartSlice";
 
 export const getAllProductAction = () =>async(dispatch) =>{
 
@@ -10,7 +11,7 @@ export const getAllProductAction = () =>async(dispatch) =>{
         console.log("Product can't be fatch");
     }
 
-  
+    
 
     dispatch(setAllProduct(allProduct.data))
 }
@@ -26,7 +27,6 @@ export const getOneProductFromIDAction = (_id) => async (dispatch) =>{
         return toast.error(result.data)
     }
 
-    console.log(result);
-
     dispatch(setOneProduct(result.data))
+    
 }

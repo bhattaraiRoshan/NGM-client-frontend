@@ -4,7 +4,7 @@ import useForm from "../../hooks/useForm"
 import { loginFormFields } from "./LoginFormField"
 import "../../App.css"
 import { useDispatch, useSelector } from "react-redux"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { setIsCreating } from "../../utility/promiseSlice"
 import { userLogin } from "../../entity/user/userAxiosHelper"
 import { toast } from "react-toastify"
@@ -25,6 +25,7 @@ export const LoginForm = () =>{
     const dispatch = useDispatch()
     const {user} = useSelector(state => state.user)
     const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(()=>{
 

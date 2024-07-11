@@ -1,9 +1,12 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector} from "react-redux"
+import { Link, useParams } from "react-router-dom"
 import { getOneProductFromIDAction } from "../../entity/product/productAction"
 import { Container, Row, Col, Button, Image, Badge, Carousel } from 'react-bootstrap';
 import "./productDetailsPage.css"
+import { setCart, setCount } from "../../entity/cart/CartSlice";
+import { toast } from "react-toastify";
+import { getOneProductForCartAction } from "../../entity/cart/CartAction";
 
 export const ProductDetailsPage = () =>{
 
@@ -15,8 +18,14 @@ export const ProductDetailsPage = () =>{
 
     const {oneProduct} = useSelector(state => state.product)
     const {user} = useSelector(state => state.user)
+    const {count} = useSelector(state => state.cart)
+    const {carts} = useSelector(state => state.cart)
+    const [addCart, setAddCart] = useState(carts)
 
-    console.log(oneProduct);
+   
+
+  
+    
     // get the book from the ID 
 
     const dispatch = useDispatch()
@@ -27,6 +36,17 @@ export const ProductDetailsPage = () =>{
             
         }
     }, [dispatch, _id])
+
+
+    const handelOnClickCart = async (_id) =>{
+
+      dispatch(setCount(count + 1))
+      toast.success("Product Added to the Cart :)")
+       dispatch(getOneProductForCartAction(_id))
+    
+      
+
+    }
 
     return(
         <Container className=" product-details  mt-4">
@@ -64,10 +84,13 @@ export const ProductDetailsPage = () =>{
             }
             {
                 !user._id && 
-                <Button  className="buy-now-button">Login</Button>
+                <Link to={"/login"} >
+                    
+                 <Button  className="buy-now-button" >Login</Button>
+                </Link>
             }
-            <Button className="add-to-cart-button">Add to cart</Button>
-            <Button className="add-to-watchlist-button">Add to Watchlist</Button>
+            <Button className="add-to-cart-button" onClick={() => handelOnClickCart(_id)}>Add to cart</Button>
+            <Button className="add-to-watchlist-button" >Add to Watchlist</Button>
           </div>
         </Col>
       </Row>

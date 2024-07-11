@@ -4,9 +4,12 @@ import { NavLink } from 'react-router-dom';
 import { Link } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import { useSelector } from 'react-redux';
+import { FaCartShopping } from "react-icons/fa6";
+
 export const Header = () =>{
 
     const {user} = useSelector(state => state.user)
+    const {count} = useSelector(state => state.cart)
     return(
       <Navbar expand="lg" className="btn_colour py-1 sticky-top">
       <div className="container">
@@ -32,10 +35,12 @@ export const Header = () =>{
                             <NavLink className="nav-link fw-bold" to="/contact">CONTACT</NavLink>
                         </li>
                     </ul>
-                    <div className='buttons text-center'>
+                    {/* <div className='text-center'> */}
 
-                        <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i> Cart </NavLink>
-                    </div>
+                        <Link to="/cart" className=" cartHeader m-2"><i className=" cartHeader fa fa-cart-shopping mr-1"></i>
+                          <span className='cart-badge'>{count}</span>
+                         </Link>
+                    {/* </div> */}
                     <div className="buttons text-center d-flex">
                         {/* <NavLink to="/signup" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink> */}
 

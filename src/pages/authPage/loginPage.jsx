@@ -5,7 +5,7 @@ import { LoginForm } from "../../components/loginForm/LoginForm";
 export const LoginPage = () =>{
 
     return(
-        <Container>
+      <Container>
       <Row className="vh-100">
         <Col className="d-flex">
           <Stack className="justify-content-center align-items-center">
