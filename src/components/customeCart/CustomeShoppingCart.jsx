@@ -56,9 +56,7 @@ export const CustomeShoppingCart = ({name, _id, description, thumbnail, priceToS
   
       </div>
      
-    </div>
-
-    
+    </div>   
 
     </>
     )
