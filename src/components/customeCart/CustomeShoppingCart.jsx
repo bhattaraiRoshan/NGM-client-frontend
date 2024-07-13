@@ -17,7 +17,7 @@ export const CustomeShoppingCart = () =>{
   const makeAPayment = async () =>{
 
     const stripe = await loadStripe("pk_test_51L7r0KH278RWkSLVITXaKLLtAf5yZ0GECJGf5NXOH7w6sBf1RjGorGYZFLuwGBKVlGOo2ST8MA7QMgjTadubH9Uv00W1SOMcFz")
-    console.log(stripe);
+    
 
     if (!stripe) {
       console.log("Stripe failed to load");
@@ -25,7 +25,8 @@ export const CustomeShoppingCart = () =>{
 
     const body = {
 
-      products: carts
+      products: carts,
+      
     }
 
     const headers = {
