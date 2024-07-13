@@ -15,6 +15,9 @@ import {  getAllProductAction } from "./entity/product/productAction"
 import { useDispatch } from "react-redux"
 import { ProductDetailsPage } from "./pages/product/ProductDetailsPage"
 import { CartPage } from "./pages/cart/CartPage"
+import { UN } from "./UN"
+import { SuccessPage } from "./pages/success page/SuccessPage"
+import { CancelPage } from "./pages/cancel Page/CancelPage"
 
 
 function App() {
@@ -37,6 +40,8 @@ function App() {
         <Route path="/contact" element={<Layout><Contact/></Layout>}/>
         <Route path="/product" element={<Layout><ProductPage/></Layout>}/>
         <Route path="/cart" element={<Layout><CartPage/></Layout>}/>
+        <Route path="/success" element={<Layout><SuccessPage/></Layout>}/>
+        <Route path="/cancel" element={<Layout><CancelPage/></Layout>}/>
         <Route path="/product/:_id" element={<Layout><ProductDetailsPage/></Layout>} />
       </Routes>
       <ToastContainer theme="colored" autoClose={100} />
