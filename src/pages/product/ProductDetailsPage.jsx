@@ -22,6 +22,7 @@ export const ProductDetailsPage = () =>{
     const {carts} = useSelector(state => state.cart)
     const [addCart, setAddCart] = useState(carts)
 
+    console.log(oneProduct);
    
 
   

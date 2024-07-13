@@ -8,7 +8,7 @@ export const ProductPage = () =>{
 
     const {allProduct} = useSelector(state => state.product)
    
-    console.log(allProduct);
+  
     
 
     return(
