@@ -15,7 +15,10 @@ const productSlice = createSlice({
             state.allProduct = action.payload
         },
         setOneProduct:(state, action) =>{
-            state.oneProduct = action.payload
+            state.oneProduct = {
+                ...action.payload,
+                quantityNeed:1
+            }
 
         }
     }
